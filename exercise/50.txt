@@ -1,0 +1,554 @@
+一、通用爬虫和聚焦爬虫
+
+1. 通用爬虫和聚焦爬虫有什么区别？
+A. 通用爬虫只能提供和文本相关的内容(HTML、Word、PDF)等等，但是不能提供多媒体文件(音乐、图片、视频)和二进制文件(程序、脚本)；而聚焦爬虫是面向主题爬虫、面向需求爬虫，都可以提供
+B. 通用爬虫提供的结果千篇一律，不等针对不同背景领域的人提供不同的搜索结果；而聚焦爬虫会针对某种特定的能容去爬取信息，而且保证内容需求尽可能相关。
+C. 通用爬虫索引擎会和DNS服务商服务商进行合作，可以快速收录新的网站；而聚焦爬虫不可以
+D. 大型的通用爬虫遵守robots.txt协议，聚焦爬虫可以不遵守
+E. 通用爬虫是浏览器搜索引擎爬虫，聚焦爬虫是程序员自己写的爬虫
+
+答案：ABCDE
+解析：主要理解通用爬虫和聚焦爬虫的含义即可
+
+2. 下列那些属于通用搜索引擎
+A. Google
+B. 淘宝
+C. 必应
+D. 去哪儿
+E. 百度
+F. 有道
+
+答案：ACEF
+解析：BD为垂直搜索引擎
+通用搜索引擎就如同互联网第一次出现的门户网站一样，大量的信息整合导航，极快的查询，将所有网站上的信息整理在一个平台上供网民使用（具体可查看马海祥博客《搜索引擎工作的基础流程与原理》的相关介绍）。
+垂直搜索引擎为2006年后逐步兴起的一类搜索引擎。不同于通用的网页搜索引擎，垂直搜索专注于特定的搜索领域和搜索需求（例如：机票搜索、旅游搜索、生活搜索、小说搜索、视频搜索、购物搜索等等），在其特定的搜索领域有更好的用户体验
+
+3. 搜索引擎如何排名？
+A. 关键字排名
+B. PageRank值
+C. 自然排名
+D. 竞价排名
+E. 推荐排名
+
+答案：BD
+解析：搜索引擎排名为两种
+1.PageRank值：根据网站的流量(点击量/浏览量/人气)统计，流量越高，网站排名越靠前。
+2.竞价排名：谁给的钱多，谁排名就高。
+
+二、HTTP和HTTPS
+4. 以下针对HTTP和HTTPS说法错误的是？
+A. http和https都支持支持客户/服务器模式
+B. http和https使用的是完全不同的连接方式，用的端口也不一样，前者是443，后者是80
+C. http是超文本传输协议，信息是明文传输；https则是具有安全性的ssl加密传输协议。
+D. https是http协议的修改，它加密数据并确保其机密性。其配置可保护用户在与网站交互时免于窃取个人信息和计费数据
+E. https加重了服务端的负担，相比于http其需要更多的资源来支撑，但是提高了用户的访问速度
+F. http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的
+
+答案：BE
+解析：ACDF正确，主要考查对HTTP和HTTPS定义的理解
+B错误，http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443,（选项中反了）
+E错误，https加重了服务端的负担，相比于http其需要更多的资源来支撑，同时降低了用户的访问速度
+
+5. 关于URL基本格式"scheme://host[:port#]/path/…/[?query-string][#anchor]"说法错误的是：
+A. scheme表示协议(例如：http, https, ftp)
+B. host表示本地的IP
+C. port#表示服务器的端口（如果是走协议默认端口，缺省端口80）
+D. path表示访问资源的路径
+E. query-string为参数，保存到本地的参数
+F. anchor：锚（跳转到网页的指定锚点位置）
+
+答案：BE
+解析：
+B错误，host表示服务器的IP地址或者域名
+E错误，query-string为参数，发送给http服务器的数据
+
+6. 一个HTTP请求到服务器的请求消息，包括以下哪些格式：
+A. 请求行
+B. 请求头部
+C. 请求体
+D. 请求参数
+E. 空行
+F. 请求数据
+
+答案： ABEF
+解析：
+此题考查http请求的结构
+
+三、网页基础
+7. 网页的组成部分
+A. HTML
+B. Ajax
+C. Json
+D. CSS
+E. JavaScript
+
+答案：ADE
+解析：网页可以分为三大部分——HTML、CSS和JavaScript。如果把网页比作一个人的话，HTML相当于骨架，JavaScript相当于肌肉，CSS相当于皮肤，三者结合起来才能形成一个完善的网页。下面我们分别来介绍一下这三部分的功能。
+
+8. 下面那些不属于html标签
+A. p
+B. html
+C. id
+D. class
+E. meta
+F. div
+
+答案：CD
+解析：CD分别属于id选择器和类选择器
+
+9. 下列关于网页的组成说法错误的是：
+A. HTML是用来描述网页的一种语言，是超文本标记语言
+B. HTML中各种标签通过不同的排列和嵌套才形成了网页的框架
+C. CSS样式发生冲突时，浏览器能依据先后顺序处理，后面的CSS不会作用
+D. CSS样式发生冲突时，浏览器能依据层叠顺序处理
+E. 下载进度条、提示框、轮播图等页面的交互，通常都是JavaScript的功劳
+F. ，DOM是W3C（万维网联盟）的标准，是文档对象模型
+
+答案： ABDEF
+解析：
+此题考查对王姐结构的理解
+
+四、会话和Cookies
+10. 以下对于会话和Cookie说法正确的是？
+A. 在Web中，会话对象用来存储特定用户会话所需的属性及配置信息。
+B. Cookies指某些网站为了辨别用户身份、进行会话跟踪而存储在用户本地终端上的数据。
+C. Cookie的Domain或Expires字段决定了过期的时间。
+D. Cookies和会话需要配合，一个处于客户端，一个处于服务端，二者共同协作，就实现了登录会话控制。
+E. 如果传给服务器的Cookies是无效的，或者会话已经过期了，我们还可以续访问页面
+
+答案：ABD
+解析：
+C错误，Cookie的Max Age或Expires字段决定了过期的时间，Domain字段是指可以访问该Cookie的域名。
+E错误，如果传给服务器的Cookies是无效的，或者会话已经过期了，我们将不能继续访问页面，此时可能会收到错误的响应或者跳转到登录页面重新登录
+
+五、 爬虫代理
+11. 以下关于爬虫代理理解错误的是？
+A. 代理其实就是网络信息的中转站，它的功能是代理网络用户去取得网络信息。
+B. 代理可以隐藏真实的mac地址
+C. 代理可以突破自身IP访问限制，访问一些平时不能访问的站点
+D. 使用代理隐藏真实的IP，让服务器误以为是代理服务器在请求自己
+E. 通常代理服务器都设置一个较大的硬盘缓冲区，当有外界的信息通过时，同时也将其保存到缓冲区中，当其他用户再访问相同的信息时，则直接由缓冲区中取出信息，传给用户，以提高访问速度
+F. 根据协议区分，代理可分为：FTP代理服务器、HTTP代理服务器、SSL/TLS代理、RTSP代理等等
+
+答案：B
+解析：
+B错误，代理可以隐藏真实IP，但是不能隐藏真实的mac地址
+
+六、基本库的使用
+12. 以下对urllib基本库的说法错误的是？
+A. request是最基本的HTTP请求模块，可以用来模拟发送请求
+B. 在Python3中，有urllib和urllib2两个库来实现请求的发送
+C. error是异常处理模块，如果出现请求错误，我们可以捕获这些异常，然后进行重试或其他操作以保证程序不会意外终止
+D. parse是一个工具模块，提供了许多URL处理方法，比如拆分、解析、合并等。
+E. robotparser主要是用来识别网站的robots.txt文件，然后判断哪些网站可以爬，哪些网站不可以爬，它其实用得比较少。
+F. urlopen()模块提供了最基本的构造HTTP请求的方法
+
+答案： BF
+解析：
+B错误，在Python3中，已经不存在urllib2这个库了，统一为urllib；而在Python2中，有urllib和urllib2两个库来实现请求的发送
+F错误，urlopen()不是urllib下面的模块，而是urllib.request下面的模块
+
+13. urllib中Request的构造方法如下：
+   urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)
+   其对应的参数理解正确的是？
+A. 第一个参数url用于请求URL，这是必传参数，其他都是可选参数。
+B. 第二个参数data如果要传，必须传bytes（字节流）类型的。如果它是字典，可以先用urllib.parse模块里的urlencode()编码。
+C. 第三个参数headers是一个字典，它就是请求头，我们可以在构造请求时通过headers参数直接构造，也可以通过调用请求实例的add_header()方法添加。
+D. 第四个参数origin_req_host指的是请求方的host名称或者IP地址。
+E. 第五个参数unverifiable表示这个请求是否是无法验证的，默认是False，意思就是说用户没有足够权限来选择接收这个请求的结果。
+F. 第六个参数method是一个字符串，用来指示请求使用的方法，比如GET、POST和PUT等。
+
+答案：ABCDEF
+
+14. 以下哪些不属于urllib.request模块高级用法
+A. HTTPDefaultErrorHandler：用于处理HTTP响应错误，错误都会抛出HTTPError类型的异常。
+B. HTTPRedirectHandler：用于处理重定向。
+C. HTTPCookieProcessor：用于处理Cookies。
+D. ProxyHandler：用于设置代理，默认代理为空。
+E. URLError：用于处理异常。
+F. HTTPBasicAuthHandler：用于管理认证，如果一个链接打开时需要认证，那么可以用它来解决认证问题。
+
+答案： E
+解析： URLError类来自urllib库的error模块，它继承自OSError类，是error异常模块的基类，并不属于urllib.request模块
+
+15. 关于urllib处理异常说法正确的是？
+A. 由request模块生的异常都可以通过捕获URLError类来处理
+B. HTTPError可以处理非HTTP请求错误
+C. URLError类和HTTPError类的reason属性都是用于返回错误的原因
+D. URLError是HTTPError的子类
+E. HTTPError专门用来处理HTTP请求错误
+
+答案： ACDE
+解析：
+URLError类来自urllib库的error模块，它继承自OSError类，是error异常模块的基类，由request模块生的异常都可以通过捕获这个类来处理
+HTTPError是URLError的子类，专门用来处理HTTP请求错误，比如认证请求失败等。它有如下3个属性：
+code：返回HTTP状态码，比如404表示网页不存在，500表示服务器内部错误等。
+reason：同父类一样，用于返回错误的原因。
+headers：返回请求头。
+
+七、requests模块
+16. 以下对于requests模块说法正确的是？
+A. requests是第三方库，需要进行安装
+B. 在客户端，其GET方式在通过URL提交数据，数据在URL中可以看到；POST方式，数据放置在HTML HEADER内提交。
+C. GET是向服务器传送数据，POST是从服务器上获取数据。
+D. GET方法由于受到URL长度的限制,只能传递大约1024字节；POST传输的数据量大，可以达到2M
+E. POST与GET在HTTP 中传送的方式不同，GET的参数是在HTTP 的头部传送的，而Post的数据则是在HTTP 请求的内容里传送
+F. POST传输数据时，不需要在URL中显示出来，而GET方法要在URL中显示；
+
+答案： ABDEF
+解析：C错误，get是从服务器上获取数据，post是向服务器传送数据。
+
+17. requests中的GET请求可以做到：
+A. 抓取网页
+B. 抓取二进制数据
+C. 添加headers
+D. 添加代理
+E. 提交表单
+
+答案： ABCDE
+解析： 以上所有方式都可以用get方法实现
+
+18. requests模块的高级用法有哪些？
+A. 超时设置
+B. 文件上传
+C. json数据传输
+D. 获取和设置Cookies
+E. 会话维持
+F. SSL证书验证
+
+答案：ABDEF
+解析：
+C错误，json数据传输是他的基本用法
+高级用法有：文件上传、获取和设置Cookies、会话维持、SSL证书验证、代理设置、超时设置、身份认证、Prepared Request
+
+八、正则表达式
+19. 如何匹配正整数？
+A. ^\d+$
+B. ^[1-9]*[1-9][0-9]*$
+C. ^[0-9]*[1-9][0-9]*$
+D. ^(-\d+|(0+))$
+E. ^-[0-9]*[1-9][0-9]*$
+F. ^-?\d+$
+
+答案： BC
+解析：
+A匹配非负整数
+D匹配非正整数
+E匹配负整数
+F匹配整数
+
+20. 下列哪些属于贪婪匹配？
+A. {m,n}
+B. ??
+C. {m,n}?
+D. +
+E. *
+F. *?
+
+答案： ADE
+解析：BCF为非贪婪匹配
+
+21. 下列哪些匹配单个字符？
+A. \d
+B. +
+C. \A
+D. \b
+E. {m,n}
+F. \w
+
+答案： AF
+解析：
+BE匹配字符重复性
+CD匹配位置
+
+22. 以下正则表达式说法正确的是？
+    ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
+A. 此为邮箱的正则表达式
+B. 此为网址的正则表达式
+C. 以上只允许英文字母、数字、下划线、英文句号、以及中划线组成
+D. 以上名称允许汉字、字母、数字，域名只允许英文域名
+E. 以上只允许英文字母、下划线、英文句号、以及中划线组成，不允许数字
+
+答案：AC
+解析：
+分析域名部分：
+ 一般域名的规律为“[N级域名][三级域名.]二级域名.顶级域名”，比如“qq.com”、“www.qq.com”、“mp.weixin.qq.com”、“12-34.com.cn”，分析可得域名类似“** .** .** .**”组成。
+“**”部分可以表示为[a-zA-Z0-9_-]+
+“.**”部分可以表示为\.[a-zA-Z0-9_-]+
+多个“.**”可以表示为(\.[a-zA-Z0-9_-]+)+
+ 综上所述，域名部分可以表示为[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+
+最终表达式：
+ 由于邮箱的基本格式为“名称@域名”，需要使用“^”匹配邮箱的开始部分，用“$”匹配邮箱结束部分以保证邮箱前后不能有其他字符，所以最终邮箱的正则表达式为：
+  ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
+
+23. 关于正则表达式flags参数理解正确的是？
+A. I == IGNORECASE，表示忽略大小写
+B. I == IGNORECASE，表示让元字符.匹配\n
+C. M == MULTILINE，表示让元字符 ^ $ 可以匹配每行的开头和结尾
+D. X == VERBOSE，表示可以给正则添加注释
+E. S == DOTALL，表示让元字符.匹配\n
+F. S == DOTALL，表示忽略大小写
+
+答案： ACDE
+解析：
+考查对正则表达式元字符的理解
+
+九、解析库的使用
+24. 如下匹配实例：//title[@lang='eng']，以下说法正确的是：
+A. 以上为XPath匹配规则
+B. 以上为BeautifulSoup匹配规则
+C. 以上为pquery匹配规则
+D. //代表从当前节点选取子孙节点
+E. //代表从当前节点选取直接子节点
+F. 以上代表选择所有名称为title，同时属性lang的值为eng的节点
+
+答案：ADF
+解析：这是一个XPath规则，它代表选择所有名称为title，同时属性lang的值为eng的节点
+从当前节点选取直接子节点应该是/
+
+25. 以下XPath常用规则说法正确的是：
+A. 表达式"nodename"代表选取此节点的所有子节点
+B. 表达式"nodename"代表选取此节点的所有子孙节点
+C. 表达式"/"代表从当前节点选取直接子节点
+D. 表达式"/"代表从当前节点选取直接子孙节点
+E. 表达式"."代表选取当前节点的父节点
+F. 表达式".."代表选取当前节点的父节点
+
+答案：ACF
+解析：
+"nodename"，选取此节点的所有子节点
+"/"，从当前节点选取直接子节点
+"//"，从当前节点选取子孙节点
+"."，选取当前节点
+".."，选取当前节点的父节点
+"@"，选取属性
+
+26. 以下关于XPath中的运算符说法正确的是：
+A. "age=19 or age=20"代表如果age是19，则返回true。如果age是21，则返回false
+B. "age>=19"代表如果age是19，则返回true。如果age是18，则返回false
+C. "age>19"代表如果age是19，则返回true。如果age是18，则返回false
+D. "//book | //cd"返回所有拥有book和cd元素的节点集
+E. "age=19"表示如果age是19，则返回false。如果age是20，则返回true
+F. "age<=19"表示如果age是19，则返回false。如果age是20，则返回true
+
+答案：ABD
+解析：
+C错误，"age>19"代表如果age是20，则返回true。如果age是19，则返回false
+E错误，"age=19"表示如果age是19，则返回true。如果age是20，则返回false
+F错误，"age<=19"表示如果age是19，则返回true。如果age是20，则返回false
+
+27. 以下关于Beautiful Soup解析器说法正确的是：
+A. BeautifulSoup(markup, "html.parser")，Python标准库，为内置标准库、执行速度适中、文档容错能力强
+B. BeautifulSoup(markup, "html.parser")，为第三方标准库，执行速度快、文档容错能力强
+C. BeautifulSoup(markup, "lxml")，lxml HTML解析器，速度快、文档容错能力强
+D. BeautifulSoup(markup, "lxml")，Python标准库，速度快、文档容错能力强
+E. BeautifulSoup(markup, "xml")，lxml XML解析器，速度快、唯一支持XML的解析器
+F. BeautifulSoup(markup, "xml")，html5lib解析器，速度快、唯一支持XML的解析器
+
+答案：ACE
+解析：
+注意区分解析器种类
+
+28. 以下Beautiful Soup选择器的含义：
+    (1) soup.title.name   (2) soup.p.attrs  (3) soup.p.string
+
+A. (1)选取title节点的name子节点
+B. (1)选取title节点的name属性
+C. (2)选取p节点的所有属性
+D. (2)选取p节点的所有内容
+E. (3)获取p节点的属性
+F. (3)获取p节点的内容
+
+答案：BCF
+解析：
+name获取名称
+attrs获取属性
+string获取内容
+
+29. 以下关于pyquery解析器说法正确的是：
+A. 可以使用parent()的方法来获取某个节点的父节点
+B. 可以使用parent的方法来获取某个节点的父节点
+C. 使用parents()来实现祖先借点的查找
+D. 使用parents来实现祖先借点的查找
+E. 使用siblings()方法来获取兄弟节点
+F. 使用siblings方法来获取兄弟节点
+
+答案：ACE
+解析：
+主要是考查对pyquery解析器方法的掌握
+
+30. 下列关于爬虫解：正则表达式re，Beautiful Soup，xpath与pyquery说法正确的是？
+A. 正则表达式为内置解析模块，速度最快，但使用最困难
+B. 正则表达式为第三方解析模块，速度最快，但使用最困难
+C. Beautiful Soup为内置模块，速度慢，但使用简单
+D. Beautiful Soup为第三方模块，速度慢，但使用简单
+E. 对Web有所涉及，如果比较喜欢用CSS选择器，那么解析库pyquery最适合
+F. 对Web有所涉及，如果比较喜欢用CSS选择器，那么解析库xpath最适合
+
+答案：ADE
+
+31. 系列属于关系型数据库的有：
+A. MySQL
+B. DB2
+C. MongoDB
+D. Redis
+E. SQLServer
+F. Oracle
+
+答案：ABEF
+解析：
+关系型数据库代表：MySQL DB2 SQLServer Splite Oracle
+非关系型数据库代表：MemcacheDB BerkeleyDB Redis Flare MongoDB CouchDB
+
+32. 关系型数据库与非关系型数据库的区别？
+A. 关系型数据库易于维护，都是使用表结构，格式一致；
+B. 关系型数据库易于维护，都是使用表结构，格式一致；
+C. 关系型数据库速度快，可以使用硬盘或者随机存储器作为载体，而非关系型数据库只能使用硬盘
+D. 非关系型数据库速度快，可以使用硬盘或者随机存储器作为载体，而关系型数据库只能使用硬盘
+E. 非关系型数据库高扩展性
+F. 关系型数据库高扩展性
+
+答案：ADE
+解析：
+关系型数据库优点：
+1、易于维护：都是使用表结构，格式一致；
+2、使用方便：SQL语言通用，可用于复杂查询；
+3、复杂操作：支持SQL，可用于一个表以及多个表之间非常复杂的查询。
+非关系型优点：
+1、格式灵活：存储数据的格式可以是key,value形式、文档形式、图片形式等等，文档形式、图片形式等等，使用灵活，应用场景广泛，而关系型数据库则只支持基础类型。
+2、速度快：nosql可以使用硬盘或者随机存储器作为载体，而关系型数据库只能使用硬盘；
+3、高扩展性；
+4、成本低：nosql数据库部署简单，基本都是开源软件。
+
+33. 如何创建数据库（数据库名称为test，字符集指定为utf8）？
+A. create database test character set utf8;
+B. create database test character set utf8；
+C. create databases test character set utf8;
+D. create databases test character set utf8；
+E. CREATE DATABASE test CHARACTER SET utf8;
+F. CREATE DATABASE test CHARACTER SET utf8；
+
+答案：AE
+解析：
+1.注意中文分号"；"和英文分号";"的区别
+2.sql语句不区分大小写
+3.注意CD使用了databases，语法错误
+
+34. mysql数据库中有一个名为school的数据库，查询其中students表中前id为前三人的所有成绩
+A. select * from students where id<3;
+B. select * from students where id<4;
+C. select * from students where id between 1 and 3;
+D. select * from students where id between 1 and 4;
+E. select * from students where id in (1,2,3);
+F. select * from students where id<=3;
+
+答案：BCEF
+解析：考查select语法
+
+35. 关于mysql的字符类型说法正确的是？
+A. char浪费存储空间，性能高；carchar节省存储空间，性能低
+B. char节省存储空间，性能低；carchar浪费存储空间，性能高
+C. 数值类型的宽度为实际宽度，占用存储空间
+D. 数值类型的宽度为显示宽度，只用于select查询显示，和占用存储空间无关
+E. datetime日期时间显示格式 "YYY-MM-DD"
+E. datetime日期时间显示格式 "HH:MM:SS"
+
+
+答案： AD
+解析：datetime日期时间显示格式 "YYY-MM-DD HH:MM:SS"
+
+36. MongoDB数据库数据库的特点：
+A. 使用方便，都是用sql语句，sql语句很成熟
+B. 由c++编写的数据库管理系统
+C. 支持丰富的数据类型
+D. 支持众多的编程语言接口（python PHP C++ C#）
+E. 数据一致性高，冗余低，完整性好
+F. 技术成熟，可以使用外部关联等复杂操作
+
+答案：BCD
+解析：
+AEF为关系型数据库的特点
+
+37. 下列哪些不是mongodb数据库支持的数据类型？
+A. int
+B. Symbol
+C. boolean
+D. code
+E. file
+F. Binary data
+
+答案： E
+解析：
+int 整型
+Symbol 特殊字符串
+boolean 布尔
+code 代码
+Binary data 二进制字符串
+
+38. 如何查看mongodb数据库中的集合
+A. show collections
+B. show collections;
+C. show databases;
+D. show dbs
+E. show tables;
+F. show tables
+
+答案： ABEF
+解析：
+mongodb数据库可以用";"也可以不用
+
+39. 把Json格式字符串通过json.loads()解码转换成Python对象，从json到python的类型转化错误的是：
+A. JSON： object --> Python: dict
+B. JSON： array --> Python: list
+C. JSON： string --> Python: unicode
+D. JSON： true --> Python: 1
+E. JSON： number(real) --> Python: int,long
+F. JSON： null --> Python: None
+
+答案：DE
+解析：
+A. JSON： object --> Python: dict
+B. JSON： array --> Python: list
+C. JSON： string --> Python: unicode
+D. JSON： true --> Python: True
+E. JSON： number(real) --> Python: float
+F. JSON： null --> Python: None
+
+40. 关于Ajax的理解正确的是：
+A. Ajax不是一门编程语言，而是利用JavaScript在保证页面不被刷新、页面链接不改变的情况下与服务器交换数据并更新部分网页的技术。
+B. Ajax的使用场合主要有：搜索建议、表单验证、前后端完全分离
+C. 当客户向浏览器发送请求时，服务器在处理过程中，浏览器只能等待
+D. 当客户端向服务器发送请求时，服务器在处理操作的同时，客户端可以做其他的事情，不需要一直等待，效率较高
+E. Ajax与JavaScript没有任何关系
+
+答案：ABD
+解析：
+此题考查对Ajax的理解
+
+
+
+41.
+42.
+43.
+44.
+45.
+46.
+47.
+48.
+49.
+50.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
